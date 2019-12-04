@@ -47,5 +47,5 @@ class FaceExtractor:
                 pil_image = Image.fromarray(face_image)
                 pil_image.save(destination.format(self.iterator))
                 self.iterator = self.iterator + 1
-        print("Total number of faces detected: {}".format(len(faces)))
+        print("Total number of faces detected with replicas : {}".format(len(faces)))
         return faces

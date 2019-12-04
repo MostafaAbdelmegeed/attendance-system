@@ -2,63 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ccc2629-6205-4b13-acec-a9386662c22c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/mustafa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/attendees/extracted_faces/face9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11553.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11554.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11555.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11556.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11557.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11558.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11559.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11560.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11561.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11562.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/11563.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/registered_students.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_extractor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_faces/students.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FacesExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student.py" beforeDir="false" afterPath="$PROJECT_DIR$/Student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/attendance_system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11553.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11554.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11555.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11556.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11557.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11558.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11559.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11560.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11561.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11562.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_faces/11563.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_students_info/registered_students.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/students.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/students_registeration.py" beforeDir="false" afterPath="$PROJECT_DIR$/constructing_students_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/face_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,25 +114,25 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="676" y="281" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575481354112" />
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1575484800477">
+    <state width="1125" height="236" key="GridCell.Tab.0.bottom" timestamp="1575485446639">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575484800477" />
-    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1575484800476">
+    <state width="1125" height="236" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1575485446639" />
+    <state width="1125" height="236" key="GridCell.Tab.0.center" timestamp="1575485446639">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575484800476" />
-    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1575484800476">
+    <state width="1125" height="236" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1575485446639" />
+    <state width="1125" height="236" key="GridCell.Tab.0.left" timestamp="1575485446638">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575484800476" />
-    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1575484800476">
+    <state width="1125" height="236" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1575485446638" />
+    <state width="1125" height="236" key="GridCell.Tab.0.right" timestamp="1575485446639">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575484800476" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575481508711">
+    <state width="1125" height="236" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1575485446639" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575485011293">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575481508711" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1575485011293" />
   </component>
 </project>

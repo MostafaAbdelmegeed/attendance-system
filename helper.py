@@ -32,8 +32,10 @@ def get_present_students_encoded_faces():
 def encode_faces(faces):
     encoded_faces = []
     for eachFace in faces:
-        encoded_faces.append(face_recognition.face_encodings(eachFace)[0])
-    print("Total number of encoded faces: {}".format(len(encoded_faces)))
+        height, width, _ = eachFace.shape
+        eachFace_location = (0, width, height, 0)
+        encoded_faces.append(face_recognition.face_encodings(eachFace, known_face_locations=[eachFace_location])[0])
+    print("Total number of encoded faces with replicas : {}".format(len(encoded_faces)))
     return encoded_faces
 
 
