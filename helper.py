@@ -1,10 +1,8 @@
-import Utilities
-import face_extractor
 import face_recognition
 import glob
-from PIL import Image
 import csv
 import Student
+import os
 
 
 def get_registered_students_encoded_faces():
@@ -43,10 +41,13 @@ def get_students_from_database():
     students = []
     with open('./database/registered_students.csv', newline='') as file:
         reader = csv.reader(file)
+        print('------------ Database ------------')
         for eachRow in reader:
-            print('{} {} {}'.format(eachRow[0], eachRow[1], eachRow[2]))
-            student = Student.Student(eachRow[0], eachRow[1], eachRow[2])
-            students.append(student)
+            if eachRow:
+                print('{} | {} | {}'.format(eachRow[0], eachRow[1], eachRow[2]))
+                student = Student.Student(eachRow[0], eachRow[1], eachRow[2])
+                students.append(student)
+    print('-----------------------------------')
     print("Total number of students in database : {}".format(len(students)))
     return students
 
@@ -64,3 +65,30 @@ def export_attendance_results(attendees, path):
         writer = csv.writer(csvfile)
         for attendee in attendees:
             writer.writerow([attendee.id, attendee.name, attendee.votes])
+    print('------------- Attendance -------------')
+    for attendee in attendees:
+        if attendee.votes > 1:
+            print('{} | {} | {}'.format(attendee.id, attendee.name, 'Present'))
+        else:
+            print('{} | {} | {}'.format(attendee.id, attendee.name, 'Absent'))
+    print('---------------------------------------')
+
+
+def clearTempData():
+    dir_name = "./attendees/"
+    to_be_deleted = os.listdir(dir_name)
+    for item in to_be_deleted:
+        if item.endswith(".jpg"):
+            try:
+                os.remove(os.path.join(dir_name, item))
+            except OSError:
+                print('Could not remove {}'.format(os.path.join(dir_name, item)))
+    dir_name = "./attendees/extracted_faces/"
+    to_be_deleted = os.listdir(dir_name)
+    for item in to_be_deleted:
+        if item.endswith(".jpg"):
+            try:
+                os.remove(os.path.join(dir_name, item))
+            except OSError:
+                print('Could not remove {}'.format(os.path.join(dir_name, item)))
+        print('Deleted all temporary data files.')

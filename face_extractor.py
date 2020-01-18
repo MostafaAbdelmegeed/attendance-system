@@ -37,7 +37,7 @@ class FaceExtractor:
         for filename in files:
             image = face_recognition.load_image_file(filename)
             face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
-            print("{}- I found {} face(s) in this photograph.".format(str(files.index(filename)+1), len(face_locations)))
+            print("{}- Found {} face(s) in this photograph.".format(str(files.index(filename)+1), len(face_locations)))
             for face_location in face_locations:
                 # Print the location of each face in this image
                 top, right, bottom, left = face_location

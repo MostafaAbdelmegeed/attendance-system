@@ -9,7 +9,7 @@ image = face_recognition.load_image_file("biden.jpg")
 # See also: find_faces_in_picture_cnn.py
 face_locations = face_recognition.face_locations(image)
 
-print("I found {} face(s) in this photograph.".format(len(face_locations)))
+print("Found {} face(s) in this photograph.".format(len(face_locations)))
 
 for face_location in face_locations:
 

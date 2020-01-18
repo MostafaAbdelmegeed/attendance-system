@@ -45,29 +45,35 @@ import csv
 import Student
 import helper
 
-
-# URL = 'http://192.168.1.3:8080/shot.jpg'
-# camera = Utilities.Camera(URL)
-# num_of_shots = 5
-# delay = 1
-# camera.startShooting(num_of_shots, delay)    # Takes a number of shots with a delay of 0.2 second between shots
-# shots = camera.getPhotosBatch()              # Contains the batch of photos the camera just took
+print('Enter IPWebcam IP address (***.***.*.*) :')
+IP = input()
+URL = 'http://{}:8080//shot.jpg'.format(IP)
+NUM_OF_SHOTS = 1
+DELAY = 2
+SHOTS_DIRECTORY = "./attendees/{}.jpg"
+THRESHOLD = NUM_OF_SHOTS/2
 
 
 def main():
-    facesExtractor = face_extractor.FaceExtractor()
+    camera = Utilities.Camera(URL)
+    camera.startShooting(NUM_OF_SHOTS, DELAY)  # Starts shooting the audience
+    shots = camera.getPhotosBatch()  # Contains the batch of photos the camera just took
+    camera.saveShootingsIntoDirectory(SHOTS_DIRECTORY)  # Saves taken shots into a directory pre-defined as a global var
+    print("{} shots were delivered successfully!".format(len(shots)))
+    facesExtractor = face_extractor.FaceExtractor()  # Instance from FaceExtractor
     extracted_faces = facesExtractor.extract_from_directory('./attendees/*.jpg', './attendees/extracted_faces/face{'
-                                                                                 '}.jpg')
-    encoded_extracted_faces = helper.encode_faces(extracted_faces)
-    students = helper.get_students_from_database()
-    students_encoded_faces = helper.get_students_encoded_faces(students)
+                                                                                 '}.jpg')  # Extract faces from shots
+    encoded_extracted_faces = helper.encode_faces(extracted_faces)  # Encoding the extracted faces
+    students = helper.get_students_from_database()  # Gets list of registered students
+    students_encoded_faces = helper.get_students_encoded_faces(students)  # Encodes the registered students faces
     for encoded_face in encoded_extracted_faces:
-        matches = face_recognition.compare_faces(students_encoded_faces, encoded_face)
+        matches = face_recognition.compare_faces(students_encoded_faces, encoded_face)  # Testing against the registered
         for match in matches:
             index = matches.index(match)
             if match:
                 students[index].incrementVotes()
-    helper.export_attendance_results(students, './voting.csv')
+    helper.export_attendance_results(students, './voting.csv')  # Exports voting results
+    helper.clearTempData()  # Removes temporary data made throughout the executing
 
 
 main()
