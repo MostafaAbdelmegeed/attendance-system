@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 from time import sleep
 from PIL import Image
+import os
 
 
 class Camera:
@@ -34,6 +35,30 @@ class Camera:
                     print('Shutting down the Camera..')
                     break
 
+    def startRegistering(self, number_of_shots, delay, student_id):
+        print('Shooting pictures of the audience, Please wait..')
+        for i in range(number_of_shots):
+            try:
+                print('Ready?')
+                sleep(delay / 2)
+                print('Steady?')
+                sleep(delay / 2)
+                imgRes = requests.get(self.URL)
+                imgArray = np.array(bytearray(imgRes.content), dtype=np.uint8)
+                img = cv2.imdecode(imgArray, -1)
+                self.array_of_images.append(img)
+                print("Picture #{} was taken successfully.".format(i + 1))
+                if i == number_of_shots - 1:
+                    print(str(number_of_shots) + ' Picture(s) of the audience were taken successfully.')
+                    self.saveShotsInDatabase(student_id)
+                    print('Camera is shutting off now.')
+            except AttributeError:
+                print('Attempt #{}: URL provided is not working, Please check it and re-run the program.'.format(i))
+                self.CONNECTION_FAILED += 1
+                if self.CONNECTION_FAILED > 3:
+                    print('Shutting down the Camera..')
+                    break
+
     def getPhotosBatch(self):
         return self.array_of_images
 
@@ -49,4 +74,13 @@ class Camera:
             temp = Image.fromarray(eachShooting)
             temp.save(directory.format(i))
             print("Saved shot: {}.jpg at {}".format(i, directory))
+            i += 1
+
+    def saveShotsInDatabase(self, student_id):
+        i = 1
+        print(len(self.array_of_images))
+        for eachShooting in self.array_of_images:
+            temp = Image.fromarray(eachShooting)
+            temp.save("database/{}({}).jpg".format(student_id, i))
+            print("Saved shot: {}.jpg".format(i))
             i += 1

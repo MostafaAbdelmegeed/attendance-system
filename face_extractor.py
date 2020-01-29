@@ -31,6 +31,7 @@ class FaceExtractor:
             self.iterator = self.iterator + 1
         return faces
 
+
     def extract_from_directory(self, source, destination):
         faces = []
         files = glob.glob(source)

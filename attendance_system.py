@@ -45,13 +45,13 @@ import csv
 import Student
 import helper
 
-print('Enter IPWebcam IP address (***.***.*.*) :')
+print('Enter IPWebcam IP address (***.***.*.*:****) :')
 IP = input()
-URL = 'http://{}:8080//shot.jpg'.format(IP)
-NUM_OF_SHOTS = 1
+URL = 'http://{}//shot.jpg'.format(IP)
+NUM_OF_SHOTS = 5
 DELAY = 2
 SHOTS_DIRECTORY = "./attendees/{}.jpg"
-THRESHOLD = NUM_OF_SHOTS/2
+THRESHOLD = NUM_OF_SHOTS / 2
 
 
 def main():
@@ -73,7 +73,7 @@ def main():
             if match:
                 students[index].incrementVotes()
     helper.export_attendance_results(students, './voting.csv')  # Exports voting results
-    helper.clearTempData()  # Removes temporary data made throughout the executing
+    # helper.clearTempData()   Removes temporary data made throughout the executing
 
 
 main()

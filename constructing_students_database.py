@@ -11,13 +11,13 @@ for ID in IDs:
 
 import csv
 from PIL import Image
+import Utilities
+import cv2
+import os
 
-NUM_OF_ENTRIES = input()
 
+def registerStudent(student_id, student_name):
 
-def registerStudent(student_id, student_name, student_photo_path):
-    image = Image.open(student_photo_path)
-    image.save("./database/{}.jpg".format(student_id))
     EXISTS = False
 
     with open('./database/registered_students.csv', newline='') as file:
@@ -36,18 +36,19 @@ def registerStudent(student_id, student_name, student_photo_path):
             EXISTS = False
 
 
-def registerStudentsFromTerminal(number_of_students):
-    for i in range(number_of_students):
-        print("Enter student's info")
-        print("Name: ")
-        student_name = input()
-        print("ID: ")
-        student_id = input()
-        print("Photo Path: ")
-        student_photo_path = input()
-        registerStudent(student_id, student_name, student_photo_path)
-        print("{} is added successfully to the database.".format(student_name))
-    print("{} students are added successfully in the database!".format(number_of_students))
+def registerStudentsFromTerminal():
+    print("IP (***.***.*.*:****) :")
+    URL = "http://{}".format(input())
+    camera = Utilities.Camera(URL)
+    print("Enter student's info")
+    print("Name: ")
+    student_name = input()
+    print("ID: ")
+    student_id = input()
+    print("Smile to the Camera :')")
+    camera.startRegistering(5, 1, student_id)
+    registerStudent(student_id, student_name)
+    print("{} is added successfully to the database.".format(student_name))
 
 
-registerStudentsFromTerminal(NUM_OF_ENTRIES)
+registerStudentsFromTerminal()
